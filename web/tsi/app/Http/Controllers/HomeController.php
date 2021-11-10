@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth'); //el contenido de este controlador, esté bloqueado a menos de que estés autentificado
     }
 
     /**
@@ -24,5 +24,21 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function crear()
+    {
+        return view('crearServicio');
+    }
+    /*public function eliminar()
+    {
+        return view('eliminarServicio');
+    }
+    public function modificar()
+    {
+        return view('modificarServicio');
+    }*/
+    public function ver()
+    {
+        return view('verServicio');
     }
 }
